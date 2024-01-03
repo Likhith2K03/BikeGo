@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #545352;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* Header Start */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(0, 0, 0, 0.99);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    height: 50px;
+}
+
+.collapse {
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#close {
+    display: none;
+}
+
+#login a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(to left, #535c68, #1e272e);
+    transition: background 0.3s;
+}
+
+#login a:hover {
+    background: linear-gradient(to right, #485460, #1e272e);
+}
+
+/* Home Page */
+#bikes {
+    background-image: url("./img/bike.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    clip-path: polygon(100% 100%, 0 70%, 0% 0%, 100% 0%);
+}
+
+#bikes h1,
+#bikes h4 {
+    padding-bottom: 1.5rem;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 20em;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+.search-bar input::placeholder {
+    color: #cac7ff;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    background: #58629b;
+    cursor: pointer;
+}
+
+.search-bar button i {
+    width: 25px;
+}
+
+.search-bar button:hover {
+    scale: 1.3;
+}
+
+/* Image cards */
+#products {
+    text-align: center;
+}
+
+#products .pro-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#products .product {
+    margin: 20px;
+    width: 23%;
+    min-width: 250px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+    background-color: #faf7f7b0;
+}
+
+#products .product img {
+    width: 100%;
+    height: 270px;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+}
+
+#products .product:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+    scale: 1.06;
+}
+
+#products .product .description {
+    text-align: start;
+    padding: 15px;
+}
+
+#products .product .description span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#products .product .description h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#products .product .description h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178
+}
+
+/*Shop page*/
+#search-box {
+    height: 60px;
+    width: 350px;
+    position: relative;
+}
+
+#search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 0 60px 0 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#search-box input:focus {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+#search-box .search-btn {
+    height: 50px;
+    width: 50px;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background: #000;
+    line-height: 50px;
+    text-align: centre;
+    border-radius: 50px;
+}
+
+#filters {
+    display: flex;
+    top: 50%;
+    right: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+#filters #filter-btn {
+    background-color: transparent;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.popup .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.popup .popup-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 95%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.popup .popup-content button {
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FDF0F0;
+}
+
+.popup .popup-content a {
+    display: initial;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 16px;
+}
+
+.popup.active {
+    top: 0px;
+}
+
+.popup.active .overlay {
+    opacity: 1;
+}
+
+.popup.active .popup-content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.view {
+    display: flex;
+}
+
+.view h5 {
+    margin-right: 10px;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #faf7f7b0;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer #logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+}
+
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    cursor: pointer;
+    color: #088178;
+}
+
+.copyright {
+    text-align: center;
+
+}
+
+.copyright p {
+    color: gainsboro;
+}
+
+/* Media Query */
+@media (max-width: 477px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #bikes {
+        background-position: 10%;
+    }
+
+}
+
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 1);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #navbar.active {
+        right: 0;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    .collapse {
+        display: flex;
+        align-items: center;
+    }
+
+    .collapse i {
+        color: whitesmoke;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .collapse i:hover {
+        color: #088178;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: whitesmoke;
+        font-size: 24px;
+    }
+
+    #cart {
+        display: none;
+    }
+
+    #bikes {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% left -10%;
+    }
+}
+
+@media (max-width:1400px) {
+    #bikes {
+        height: 70vh;
+        background-position: top 30% left -10%;
+    }
+
+    #products .product img {
+        height: 200px;
+    }
+}
